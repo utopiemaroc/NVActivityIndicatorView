@@ -1,22 +1,15 @@
-// swift-tools-version:5.0
+// swift-tools-version:4.0
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
 
 let package = Package(
     name: "NVActivityIndicatorView",
-    platforms: [
-        .iOS(.v9),
-        .tvOS(.v9)
-    ],
     products: [
-        .library(name: "NVActivityIndicatorView", targets: ["NVActivityIndicatorView"]),
-        .library(name: "NVActivityIndicatorViewExtended", targets: ["NVActivityIndicatorViewExtended"])
+        .library(name: "NVActivityIndicatorView", targets: ["NVActivityIndicatorView"])
     ],
+    dependencies: [],
     targets: [
-        .target(name: "NVActivityIndicatorView", path: "Sources/Base"),
-        .target(name: "NVActivityIndicatorViewExtended",
-                dependencies: ["NVActivityIndicatorView"],
-                path: "Sources/Extended")
+        .target(name: "NVActivityIndicatorView", path: "Source/NVActivityIndicatorView")
     ]
 )
